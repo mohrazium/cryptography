@@ -1,7 +1,7 @@
 name: cryptography
-description: A new Flutter package project.
+description: A cryptography library for use pointycastle in dart and flutter.
 version: 0.0.1
-homepage: null
+homepage: https://mohrazium.github.io/cryptography/
 publish_to:  # Remove this line if you wish to publish to pub.dev
 
 
