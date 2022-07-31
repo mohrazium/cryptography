@@ -1,4 +1,4 @@
-part of cryptography.core;
+part of cryptology.core;
 
 class DataCryptology implements Cryptology<AES, Uint8List> {
   @override

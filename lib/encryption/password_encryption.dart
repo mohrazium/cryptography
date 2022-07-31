@@ -1,4 +1,4 @@
-part of cryptography;
+part of cryptology;
 
 enum HashDifficulty {
   veryWeak(8, 8, 1250),

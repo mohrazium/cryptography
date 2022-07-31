@@ -1,8 +1,8 @@
-library cryptography;
+library cryptology;
 
 import 'dart:typed_data';
 
-import 'src/core/core.dart'
+import 'src/core.dart'
     show
         AES,
         AESMode,

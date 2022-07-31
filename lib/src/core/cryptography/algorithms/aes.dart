@@ -1,4 +1,5 @@
-part of cryptography.core;
+part of cryptology.core;
+
 
 enum AESMode {
   cbc('CBC', "CBCBlockCipher"),

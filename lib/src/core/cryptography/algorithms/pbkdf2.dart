@@ -1,4 +1,4 @@
-part of cryptography.core;
+part of cryptology.core;
 
 class PBKDF2 extends Algorithm {
   final Uint8List secretKey;

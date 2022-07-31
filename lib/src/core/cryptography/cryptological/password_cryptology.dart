@@ -1,4 +1,4 @@
-part of cryptography.core;
+part of cryptology.core;
 
 class PasswordCryptology implements Cryptology<PBKDF2, Uint8List> {
   @override

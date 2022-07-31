@@ -1,6 +1,6 @@
 // ignore_for_file: depend_on_referenced_packages
 
-library cryptography.core;
+library cryptology.core;
 
 import 'dart:convert';
 import 'dart:typed_data';
@@ -11,28 +11,22 @@ import 'package:pointycastle/export.dart'
         AESEngine,
         BlockCipher,
         CBCBlockCipher,
-        CCMBlockCipher,
         CFBBlockCipher,
-        CTRBlockCipher,
-        ECBBlockCipher,
         FortunaRandom,
         GCMBlockCipher,
-        GCTRBlockCipher,
         HMac,
-        IGEBlockCipher,
         KeyParameter,
         OFBBlockCipher,
         PBKDF2KeyDerivator,
         PKCS7Padding,
         ParametersWithIV,
         Pbkdf2Parameters,
-        SHA512Digest,
-        SICBlockCipher;
+        SHA512Digest;
 
-part 'cryptology/algorithms/aes.dart';
-part 'cryptology/algorithms/pbkdf2.dart';
-part 'cryptology/algorithm.dart';
-part 'cryptology/cryptology.dart';
-part 'cryptology/cryptological/password_cryptology.dart';
-part 'cryptology/cryptological/data_cryptology.dart';
-part 'helpers/crypto_helpers.dart';
+part 'core/cryptography/algorithms/aes.dart';
+part 'core/cryptography/algorithms/pbkdf2.dart';
+part 'core/cryptography/algorithm.dart';
+part 'core/cryptography/cryptography.dart';
+part 'core/cryptography/cryptological/password_cryptology.dart';
+part 'core/cryptography/cryptological/data_cryptology.dart';
+part 'core/helpers/crypto_helpers.dart';

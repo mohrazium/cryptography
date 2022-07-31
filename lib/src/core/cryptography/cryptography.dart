@@ -1,4 +1,4 @@
-part of cryptography.core;
+part of cryptology.core;
 
 abstract class Cryptology<A extends Algorithm, D> {
   late final A algorithm;

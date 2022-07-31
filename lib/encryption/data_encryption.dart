@@ -1,4 +1,4 @@
-part of cryptography;
+part of cryptology;
 
 const String _randomKey16 = "kLxJ2yjFzs6jay9V";
 const String _randomKey24 = "jsRkAz3uXzEHWBpEiU4Os1MD";

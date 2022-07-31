@@ -1,4 +1,4 @@
-part of cryptography.core;
+part of cryptology.core;
 
 /// Extension on String for convert them to Uint8List.
 extension CryptoHelpersString on String {
