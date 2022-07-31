@@ -29,7 +29,7 @@ class PBKDF2 extends Algorithm {
     if (data is Uint8List) {
       inputData = data;
     } else if (data is String) {
-      inputData = data.toUint8List();
+      inputData = data.toBytes();
     } else {
       throw "Please provide a valid data type of Uint8List or String";
     }
@@ -38,8 +38,8 @@ class PBKDF2 extends Algorithm {
       '',
       secureKey,
       [blockLength, iterationCount, desiredKeyLength],
-      CryptoHelpers.toHexString(_salt),
-      CryptoHelpers.toHexString(bytes),
-    ].join('\$').toUint8List();
+      CryptoHelpers.toHex(_salt),
+      CryptoHelpers.toHex(bytes),
+    ].join('\$').toBytes();
   }
 }

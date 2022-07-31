@@ -45,11 +45,11 @@ class DataEncryption {
   Future<Uint8List> encrypt(Uint8List data) => _dataCryptology.encrypt(data);
 
   Future<String> encryptB64(Uint8List data) async =>
-      CryptoHelpers.toBase64String(await encrypt(data));
+      CryptoHelpers.toB64(await encrypt(data));
 
   Future<Uint8List> decrypt(Uint8List cipherData) =>
       _dataCryptology.decrypt(cipherData);
 
   Future<Uint8List> decryptB64(String b64Data) =>
-      decrypt(CryptoHelpers.toUint8ListBase64(b64Data));
+      decrypt(CryptoHelpers.toBytesBase64(b64Data));
 }

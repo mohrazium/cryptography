@@ -2,12 +2,12 @@ part of cryptography.core;
 
 /// Extension on String for convert them to Uint8List.
 extension CryptoHelpersString on String {
-  toUint8List() => CryptoHelpers.createUint8ListFromHexString(this);
+  toBytes() => CryptoHelpers.toBytes(this);
 }
 
 /// Extension on Uint8List for convert them to String.
-extension CryptoHelpersUint8List on Uint8List {
-  toNormalString() => CryptoHelpers.toHexString(this);
+extension CryptoHelpersBytes on Uint8List {
+  toHex() => CryptoHelpers.toHex(this);
 }
 
 /// Extension on String for convert them to Uint8List.
@@ -17,7 +17,7 @@ extension CryptoHelpersMixBytes on String {
 
 class CryptoHelpers {
   /// Creates a hexadecimal representation of the given [bytes].
-  static String toHexString(Uint8List bytes) {
+  static String toHex(Uint8List bytes) {
     var result = StringBuffer();
     for (var i = 0; i < bytes.lengthInBytes; i++) {
       var part = bytes[i];
@@ -38,9 +38,9 @@ class CryptoHelpers {
     return mixedBytes;
   }
 
-  /// Creates binary data from the given [hex] hexadecimal String.
-  static Uint8List createUint8ListFromHexString(String hex) {
-    return Uint8List.fromList(utf8.encode(hex));
+  /// Creates binary data from the given [plainText] String.
+  static Uint8List toBytes(String plainText) {
+    return Uint8List.fromList(utf8.encode(plainText));
   }
 
   /// Simply convert a [bytes] to string.
@@ -48,14 +48,14 @@ class CryptoHelpers {
       String.fromCharCodes(bytes);
 
   /// Encode a [bytes] to base64 encoded string.
-  static String toBase64String(Uint8List bytes) => base64.encode(bytes);
+  static String toB64(Uint8List bytes) => base64.encode(bytes);
 
   /// Decode a [base64Coded] string to corresponding string.
-  static Uint8List toUint8ListBase64(String base64Coded) =>
+  static Uint8List toBytesBase64(String base64Coded) =>
       base64.decode(base64Coded);
 
   /// Decode a [base64Coded] string to corresponding string.
-  static String toStringBase64(String base64Coded) =>
+  static String toNormalString(String base64Coded) =>
       utf8.decode(base64.decode(base64Coded));
 
   /// Padded [src] bytes with value of [blockSize]

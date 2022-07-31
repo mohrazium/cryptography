@@ -31,7 +31,7 @@ class PasswordEncryption {
       blockLength: _difficulty.blockLength,
       desiredKeyLength: _difficulty.desiredKeyLength,
       iterationCount: _difficulty.iterationCount,
-      secretKey: _secretKey.toUint8List(),
+      secretKey: _secretKey.toBytes(),
     ));
   }
 
@@ -41,14 +41,14 @@ class PasswordEncryption {
 
   /// Hashed the given plain-text [password].
   Future<String> hashB64(String password) async =>
-      CryptoHelpers.toBase64String(await hash(password.toUint8List()));
+      CryptoHelpers.toB64(await hash(password.toBytes()));
 
   /// Checks if the given plain-text [password] matches the given encoded [hash].
   Future<bool> verify(String password, Uint8List hashedPassword) async =>
-      _passwordCryptology.verify(password.toUint8List(), hashedPassword);
+      _passwordCryptology.verify(password.toBytes(), hashedPassword);
 
   /// Checks if the given plain-text [password] matches the given encoded [hash].
   Future<bool> verifyB64(String password, String b64HashedPassword) async =>
-      _passwordCryptology.verify(password.toUint8List(),
-          CryptoHelpers.toStringBase64(b64HashedPassword).toUint8List());
+      _passwordCryptology.verify(password.toBytes(),
+          CryptoHelpers.toNormalString(b64HashedPassword).toBytes());
 }
