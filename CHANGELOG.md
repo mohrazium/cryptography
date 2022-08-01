@@ -1,4 +1,8 @@
 
+# 0.0.5
+
+## Fix export toUtf8 extension
+
 # 0.0.4
 
 ## Added utf8 extension to convert bytes to normal values
