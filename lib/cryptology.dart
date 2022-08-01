@@ -12,6 +12,15 @@ import 'src/core.dart'
         DataCryptology,
         PBKDF2,
         PasswordCryptology;
+        
+export 'src/core.dart'
+    show
+        AESMode,
+        CryptoHelpers,
+        CryptoHelpersString,
+        CryptoHelpersMixBytes,
+        DataCryptology,
+        PasswordCryptology;
 
 part 'encryption/password_encryption.dart';
 part 'encryption/data_encryption.dart';

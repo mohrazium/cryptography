@@ -1,15 +1,15 @@
 
-# Cryptography
+# Cryptology
 
 A cryptography library for use pointycastle in dart and flutter.
 this package provides password encryption and data encryption.
 
 ## Getting started
 
-For using Cryptography adding this package to your pubspec.yaml file
+For using Cryptology adding this package to your pubspec.yaml file
 
 ```bash
-flutter pub add cryptography
+flutter pub add cryptology
 ```
 
 ### Password encryption and verify
