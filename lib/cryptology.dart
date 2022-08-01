@@ -12,13 +12,14 @@ import 'src/core.dart'
         DataCryptology,
         PBKDF2,
         PasswordCryptology;
-        
+
 export 'src/core.dart'
     show
         AESMode,
         CryptoHelpers,
         CryptoHelpersString,
         CryptoHelpersMixBytes,
+        CryptoHelpersUtf8,
         DataCryptology,
         PasswordCryptology;
 
