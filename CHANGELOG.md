@@ -1,4 +1,8 @@
 
+# 0.0.4
+
+## Added utf8 extension to convert bytes to normal values
+
 # 0.0.3
 
 ## Fix export CryptoHelpers and AESModes
