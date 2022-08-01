@@ -1,5 +1,9 @@
 part of cryptology.core;
 
+extension CryptoHelpersUtf8 on Uint8List {
+  toUtf8() => utf8.decode(this);
+}
+
 /// Extension on String for convert them to Uint8List.
 extension CryptoHelpersString on String {
   toBytes() => CryptoHelpers.toBytes(this);
