@@ -20,6 +20,10 @@ extension CryptoHelpersMixBytes on String {
 }
 
 class CryptoHelpers {
+  
+  // Convert bytes to utf8 string
+  static String toUtf8(Uint8List value) => utf8.decode(value);
+
   /// Creates a hexadecimal representation of the given [bytes].
   static String toHex(Uint8List bytes) {
     var result = StringBuffer();
