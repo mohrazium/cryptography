@@ -1,6 +1,6 @@
 name: cryptology
 description: A cryptography library for use pointycastle in dart and flutter.
-version: 0.0.5
+version: 0.0.6
 homepage: https://mohrazium.github.io/cryptology/
 
 

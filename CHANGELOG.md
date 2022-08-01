@@ -1,4 +1,8 @@
 
+# 0.0.6
+
+## Added toUtf8 method for CryptoHelpers
+
 # 0.0.5
 
 ## Fix export toUtf8 extension
